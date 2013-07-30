@@ -12,7 +12,7 @@ cat.src = "http://hangoutmediastarter.appspot.com/static/mustache.png";
 cat.onload = function() {
   context.drawImage(cat, 0, 0);
 };
-
+xmlParser("https://picasaweb.google.com/data/feed/api/user/104764900862072743431");
 function xmlParser(xmlURL)
     {  
       //var div_links = document.getElementById('links');
