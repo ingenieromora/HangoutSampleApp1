@@ -52,11 +52,11 @@ charset = iso - 8859 - 1 " />
   </center>
 </body>
   <script>
-    var participants = null;
-    participants = gapi.hangout.getLocalParticipantId();
+    var participant = null;
+    participant = gapi.hangout.getLocalParticipant();
     //participants = "'Hello World";
     var para=document.createElement("p");
-    var node=document.createTextNode(participants);
+    var node=document.createTextNode(participant.id);
     para.appendChild(node);
     var element=document.getElementById("div2");
     element.appendChild(para);          
