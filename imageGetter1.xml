@@ -47,8 +47,8 @@ charset = iso - 8859 - 1 " />
   <script src="https://hangoutmediastarter.appspot.com/static/html5slider.js"></script>
 
   <center>  
-    <p>HI!</p>
-    <canvas id="e" width="100" height="100"></canvas>
+    <div id="div2"></div>
+    <canvas id="e" width="500" height="500"></canvas>
   </center>
 </body>
   <script>
