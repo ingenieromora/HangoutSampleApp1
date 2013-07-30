@@ -25,7 +25,7 @@ function imageGetter(){
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
-    //xmlParser("https://picasaweb.google.com/data/feed/api/user/"+participant.person.id);
+    xmlParser("https://picasaweb.google.com/data/feed/api/user/"+userID);
     function xmlParser(xmlURL)
         {  
           //var div_links = document.getElementById('links');
