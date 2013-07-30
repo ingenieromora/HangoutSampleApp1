@@ -51,7 +51,7 @@ charset = iso - 8859 - 1 " />
     <canvas id="e" width="500" height="500"></canvas>
   </center>
 </body>
-  <script src="https://raw.github.com/leomora/HangoutSampleApp1/master/imageGetter1.js"></script>
+  <script src="https://rawgithub.com/leomora/HangoutSampleApp1/master/imageGetter1.js"></script>
 ]]>
 </Content>
 
