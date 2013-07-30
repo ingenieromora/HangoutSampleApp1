@@ -67,7 +67,7 @@ charset = iso - 8859 - 1 " />
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
-
+    /**
     var div_links = document.getElementById('links');
 
     var xmlDoc = loadXML('https://picasaweb.google.com/data/feed/api/user/104764900862072743431');
@@ -111,7 +111,7 @@ charset = iso - 8859 - 1 " />
        }
      alert("Error cargando el documento.");
      return null;
-    }
+    } **/
   </script>
 
 ]]>
