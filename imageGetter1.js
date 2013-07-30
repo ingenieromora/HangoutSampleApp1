@@ -11,8 +11,10 @@ function init() {
 function imageGetter(){
     var participant = null;
     participant = gapi.hangout.getLocalParticipant();
+    var userID = null;
+    userID = participant.person.id;
     var para=document.createElement("p");
-    var node=document.createTextNode(participant.person.id);
+    var node=document.createTextNode(userID);
     para.appendChild(node);
     var element=document.getElementById("div2");
     element.appendChild(para);          
