@@ -21,7 +21,7 @@ function imageGetter(){
     var canvas = document.getElementById("e");
     var context = canvas.getContext("2d");
     var cat = new Image();
-    cat.src = "https://docs.google.com/a/globant.com/file/d/0B4pOcT0qgApkLXR3cUJyN2s3MFk/edit?usp=sharing";
+    cat.src = "https://drive.google.com/uc?export=view&id=0B4pOcT0qgApkR29Jdk5tNjBnTnc";
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
