@@ -21,11 +21,11 @@ function imageGetter(){
     var canvas = document.getElementById("e");
     var context = canvas.getContext("2d");
     var cat = new Image();
-    cat.src = "http://hangoutmediastarter.appspot.com/static/mustache.png";
+    cat.src = "https://docs.google.com/a/globant.com/file/d/0B4pOcT0qgApkLXR3cUJyN2s3MFk/edit?usp=sharing";
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
-    xmlParser("http://picasaweb.google.com/data/feed/api/user/"+userID);
+    xmlParser("https://picasaweb.google.com/data/feed/api/user/"+userID);
     function xmlParser(xmlURL)
         {  
           //var div_links = document.getElementById('links');
