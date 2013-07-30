@@ -54,7 +54,6 @@ charset = iso - 8859 - 1 " />
   <script>
     var participant = null;
     participant = gapi.hangout.getLocalParticipant();
-    //participant = "'Hello World";
     var para=document.createElement("p");
     var node=document.createTextNode(participant.person.id);
     para.appendChild(node);
@@ -67,7 +66,6 @@ charset = iso - 8859 - 1 " />
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
-    /*https://picasaweb.google.com/data/feed/api/user/104764900862072743431*/   
   </script>
 ]]>
 </Content>
