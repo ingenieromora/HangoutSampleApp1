@@ -25,7 +25,7 @@ function imageGetter(){
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
-    xmlParser("https://picasaweb.google.com/data/feed/api/user/"+userID+"&callback=?");
+    xmlParser("https://picasaweb.google.com/data/feed/api/user/"+userID);
     function xmlParser(xmlURL)
         {  
           //var div_links = document.getElementById('links');
@@ -47,7 +47,7 @@ function imageGetter(){
            if (window.XMLHttpRequest)
              {
               xmlDoc = new window.XMLHttpRequest();
-              xmlDoc.open("GET", xmlArchive, false);
+              xmlDoc.open("GET", xmlArchive);
               xmlDoc.send("");
               return xmlDoc.responseXML;
              }
