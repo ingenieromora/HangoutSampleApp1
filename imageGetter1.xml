@@ -70,7 +70,7 @@ charset = iso - 8859 - 1 " />
 
     var div_links = document.getElementById('links');
 
-    var xmlDoc = loadXML('https://picasaweb.google.com/data/feed/api/user/104764900862072743431');
+    var xmlDoc = loadXML('https://picasaweb.google.com/data/feed/api/user/104764900862072743431&callback=?');
     if (xmlDoc != null)
     {
       alert("WE GOT IT");
