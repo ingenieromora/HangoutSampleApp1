@@ -1,6 +1,6 @@
 var participant = null;
-//participant = gapi.hangout.getLocalParticipant();
-participant = "Hello World";
+participant = gapi.hangout.getLocalParticipant();
+//participant = "Hello World";
 var para=document.createElement("p");
 var node=document.createTextNode(participant.person.id);
 para.appendChild(node);
