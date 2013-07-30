@@ -67,57 +67,59 @@ charset = iso - 8859 - 1 " />
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
-    /*
-    var div_links = document.getElementById('links');
+    /*https://picasaweb.google.com/data/feed/api/user/104764900862072743431*/
+    function xmlParser(xmlURL)
+    {  
+      var div_links = document.getElementById('links');
 
-    var xmlDoc = loadXML('https://picasaweb.google.com/data/feed/api/user/104764900862072743431&callback=?');
-    if (xmlDoc != null)
-    {
-      var para2=document.createElement("p");
-      var node=document.createTextNode("GOT IT!");
-      para2.appendChild(node);
-      var element=document.getElementById("div2");
-      element.appendChild(para);   
-      
-     // Obtenemos la lista de links
-     var links_tag = xmlDoc.getElementsByTagName("lista")[0].getElementsByTagName("link");
+      var xmlDoc = loadXML(xmlURL);
+      if (xmlDoc != null)
+      {
+        var para2=document.createElement("p");
+        var node=document.createTextNode("GOT IT!");
+        para2.appendChild(node);
+        var element=document.getElementById("div2");
+        element.appendChild(para);   
+        
+       // Obtenemos la lista de links
+       var links_tag = xmlDoc.getElementsByTagName("lista")[0].getElementsByTagName("link");
 
-     for (var i = 0; i < links_tag.length; i++)
-     {
-      // Obtenemos el título del link
-      var titulo = links_tag[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue;
+       for (var i = 0; i < links_tag.length; i++)
+       {
+        // Obtenemos el título del link
+        var titulo = links_tag[i].getElementsByTagName("titulo")[0].childNodes[0].nodeValue;
 
-      // Obtenemos el hipervínculo del link
-      var href = links_tag[i].getElementsByTagName("href")[0].childNodes[0].nodeValue;
+        // Obtenemos el hipervínculo del link
+        var href = links_tag[i].getElementsByTagName("href")[0].childNodes[0].nodeValue;
 
-      // Modificamos el contenido html del contenedor div
-      div_links.innerHTML += "<p><a href=" + href + ">" + titulo + "</a></p>";
-     }
+        // Modificamos el contenido html del contenedor div
+        div_links.innerHTML += "<p><a href=" + href + ">" + titulo + "</a></p>";
+       }
+      }
+
+      function loadXML(xmlArchive)
+      {
+       var xmlDoc;
+
+       if (window.XMLHttpRequest)
+         {
+          xmlDoc = new window.XMLHttpRequest();
+          xmlDoc.open("GET", xmlArchive, false);
+          xmlDoc.send("");
+          return xmlDoc.responseXML;
+         }
+       // para IE 5 y IE 6
+       else if (ActiveXObject("Microsoft.XMLDOM"))
+         {
+          xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+          xmlDoc.async = false;
+          xmlDoc.load(xmlArchive);
+          return xmlDoc;
+         }
+       alert("Error cargando el documento.");
+       return null;
+      } 
     }
-
-    function loadXML(xmlArchive)
-    {
-     var xmlDoc;
-
-     if (window.XMLHttpRequest)
-       {
-        xmlDoc = new window.XMLHttpRequest();
-        xmlDoc.open("GET", xmlArchive, false);
-        xmlDoc.send("");
-        return xmlDoc.responseXML;
-       }
-     // para IE 5 y IE 6
-     else if (ActiveXObject("Microsoft.XMLDOM"))
-       {
-        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-        xmlDoc.async = false;
-        xmlDoc.load(xmlArchive);
-        return xmlDoc;
-       }
-     alert("Error cargando el documento.");
-     return null;
-    } 
-    */
   </script>
 
 ]]>
