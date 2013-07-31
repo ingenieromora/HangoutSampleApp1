@@ -25,7 +25,8 @@ function imageGetter(){
     cat.onload = function() {
       context.drawImage(cat, 0, 0);
     };
-    xmlParser("https://picasaweb.google.com/data/feed/api/user/"+userID);
+    //xmlParser("https://picasaweb.google.com/data/feed/api/user/"+userID);
+    getPicasaAlbums();
     function xmlParser(xmlURL)
         {  
           //var div_links = document.getElementById('links');
@@ -47,8 +48,10 @@ function imageGetter(){
            if (window.XMLHttpRequest)
              {
               xmlDoc = new window.XMLHttpRequest();
+              xmlDoc.crossOrigin = 'anonymous'; 
               xmlDoc.open("GET", xmlArchive);
               xmlDoc.send("");
+
               return xmlDoc.responseXML;
              }
            //IE 5 y IE 6
