@@ -26,7 +26,7 @@ function imageGetter(){
       context.drawImage(cat, 0, 0);
     };
     //xmlParser("https://picasaweb.google.com/data/feed/api/user/"+userID);
-    getPicasaAlbums();
+    getPicasaAlbums("https://picasaweb.google.com/data/feed/api/user/default");  
     function xmlParser(xmlURL)
         {  
           //var div_links = document.getElementById('links');

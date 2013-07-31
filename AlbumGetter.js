@@ -1,7 +1,7 @@
 // Define global variables needed to access Picasa Web Albums Data API
 var NAME = 'lh2';
 var SCOPE = 'http://picasaweb.google.com/data/';
-var URL = "https://picasaweb.google.com/data/feed/api/user/default";
+//var URL = "https://picasaweb.google.com/data/feed/api/user/default";
 
 /*
 - Fetch the Picasa albums of the current user
@@ -9,8 +9,9 @@ var URL = "https://picasaweb.google.com/data/feed/api/user/default";
 - Add their titles to a listbox
 - Put this listbox in a UI and show it in the spreadsheet
 */
-function getPicasaAlbums(){
- console.log("ENTER");
+function getPicasaAlbums(URL){
+ console.log("ENTER-->URL:"+URL);
+ console.log("NAME"+ NAME + " SCOPE" +SCOPE);
  var data = UrlFetchApp.fetch(URL, googleOAuth_()).getContentText();
  var xmlOutput = Xml.parse(data, false);
  var albums = xmlOutput.getElement().getElements('entry');
