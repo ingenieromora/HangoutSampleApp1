@@ -10,6 +10,7 @@ var URL = "https://picasaweb.google.com/data/feed/api/user/default";
 - Put this listbox in a UI and show it in the spreadsheet
 */
 function getPicasaAlbums(){
+ console.log("ENTER");
  var data = UrlFetchApp.fetch(URL, googleOAuth_()).getContentText();
  var xmlOutput = Xml.parse(data, false);
  var albums = xmlOutput.getElement().getElements('entry');
