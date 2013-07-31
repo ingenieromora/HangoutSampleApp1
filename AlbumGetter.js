@@ -10,9 +10,10 @@ var SCOPE = 'http://picasaweb.google.com/data/';
 - Put this listbox in a UI and show it in the spreadsheet
 */
 function getPicasaAlbums(URL){
- console.log("ENTER-->URL:"+URL);
- console.log("NAME"+ NAME + " SCOPE" +SCOPE);
+ console.log("ENTER-->URL: "+URL);
+ console.log("NAME "+ NAME + " SCOPE " +SCOPE);
  var data = UrlFetchApp.fetch(URL, googleOAuth_()).getContentText();
+ console.log(data);
  var xmlOutput = Xml.parse(data, false);
  var albums = xmlOutput.getElement().getElements('entry');
  var info = [];
